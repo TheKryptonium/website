@@ -17,23 +17,26 @@
         <nav class="nav">
            <ul class="list-unstyled">
                 <li class="nav-item">
-                    <i class="fa fa-bars"></i>
+                    <a href="#left-menu"><i class="fa fa-bars"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img class="img-fluid" src="./assets/images/logo/OCTAL-GROUP_V3.png" alt="Octal-Group"></a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img class="img-fluid logo" src="./assets/images/logo/OCTAL-GROUP-TEXTE.png" alt="Octal-Group"></a>
                 </li>
            </ul>
         </nav>
 
 
         <!--LEFT-MENU-->
-        <div class="left-menu">
-            <ul class="list-unstyled">
-            <li><a href="">A propos de nous</a></li>
-            <li><a href="">Nos produits</a></li>
-            <li><a href="">Nos engagements</a></li>
-            <li><a href="">Nos histoires</a></li>
-            </ul>
+        <div class="overlay" id="left-menu">
+            <div class="left-menu">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img class="img-fluid" src="./assets/images/logo/OCTAL-GROUP_V3.png" alt="Octal-Group"></a>
+                <ul class="list-unstyled">
+                <li class="active"><a href="#" >A propos de nous</a></li>
+                <li><a href="./products.html">Nos produits</a></li>
+                <li><a href="./engagements.html">Nos engagements</a></li>
+                <li><a href="./stories.html">Nos histoires</a></li>
+                </ul>
+            </div>
         </div>
 
     </header>
@@ -43,47 +46,53 @@
         <div class="row object justify-content-center">
             
             <!--OBJECTIF DE L'ENTREPRISE-->
-            <span class="text-center">
-                Notre objectif est d'organiser les informations à l'échelle mondiale pour les rendre accessibles et utiles à tous
+            <span class="text-center fs-3 my-5">
+                Notre objectif est <span style="color: blue;">d'organiser</span> les <span style="color: red;">informations</span>  à l'échelle mondiale pour les rendre <span style="color: green;">accessibles</span> et <span style="color: rgb(250, 166, 10)">utiles à tous</span>
             </span>
-            <img class="img-fluid" src="./assets/images/decouverte.jpg" alt="Image_jardin">
-            <span class="find text-center">
+            
+            <img class="img-fluid my-5" src="./assets/images/decouverte.jpg" alt="Image_jardin">
+
+            <div class="find text-center ">
                 Découvrez comment nous pouvons vous aider à faire des choix plus écoresponsables pour vos voyages, vos achats ou encrore la consommation d'énergie de votre domicile
-            </span>
-            <a href="#">En savoir plus</a>
+                <div class="link mt-5"><a href="#" class="text-decoration-none fw-bolder">En savoir plus</a></div>
+            </div>
+            
         </div>
 
-        <div class="row" id="products">
+        <div class="row my-5" id="products">
             <!--PRODUITS-->
-            <h3 class="text-center">Facilitez-vous la vie à l'aide de nos produits</h3>
-            <div class="buttons">
-                <div class="btn btn-primary text-white">Parcourir tous les produits</div>
-                <div class="btn btn-white text-primary">Besoin d'aide sur un produit ?</div>
+            <h2 class="text-center">Facilitez-vous la vie à l'aide de nos produits</h3>
+            <div class="buttons my-4 row justify-content-center">
+                <div class="btn btn-primary text-white col-md-3 col-xs-5 col-xs-8 mx-3">Parcourir tous les produits</div>
+                <div class="btn btn-white border-2 text-primary col-md-3 col-xs-5 col-xs-8 mx-3">Besoin d'aide sur un produit ?</div>
             </div>
-            <div  id="img-prod" class="row">
+
+            <!--Presentation des produits-->
+            <div  id="img-prod" class="row my-5">
 
                 <div class="card col-sm-6">
                     <img class="card-img-top" src="./assets/images/security.jpg" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">La sécurité au coeur de chaque produit Google</h5>
+                        <h5 class="card-title text-center">La sécurité au coeur de chaque produit Google</h5>
                     </div>
                 </div>
 
                 <div class="card col-sm-6">
                     <img class="card-img-top" src="./assets/images/workspace.jpg" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">Transformez les méthode de travail de vos équipes avec Google Workspace</h5>
+                        <h5 class="card-title text-center">Partagez des moments précieux et restez connecté avec vos proches, où que vous soyez, grâce à OMAIL</h5>
                     </div>                    
                 </div>
 
             </div>
+
         </div>
 
         <!--ENGAGAMENTS-->
-        <div id="engagements">
-            <h2>Nous souhaitons contribuer à améliorer la vie du plus grand nombre grâce à la technologie</h2>
-            <button class="btn btn-primary"><a href="./engagements.html">Découvrer nos engagements</a></button>
-            <div id="img-eng" class="row">
+        <div id="engagements" class="my-5 justify-content-center text-center">
+            <h2 class="text-center my-5">Nous souhaitons contribuer à améliorer la vie du plus grand nombre grâce à la technologie</h2>
+            <button class="btn btn-primary my-3"><a href="./engagements.html">Découvrez nos engagements</a></button>
+            <div id="img-eng" class="row my-5">
                 <div class="card col-sm-6">
                     <img class="card-img-top" src="./assets/images/carbone.jpg" alt="">
                     <div class="card-body">
@@ -101,23 +110,23 @@
 
 
             <!--ARTICLES-->
-        <div id="articles">
+        <div id="articles" class="my-5 justify-content-center text-center">
             <h2>Ce qu'il y a de mieux dans la technologie, c'est de voir ce que le monde en fait </h2>
-            <button class="btn btn-primary"><a href="./stories">Découvrez nos articles</a></button>
+            <button class="btn btn-primary my-5"><a href="./stories">Découvrez nos articles</a></button>
         </div>
 
 
     </div>
 
     <footer>
-        <h3>Suivez nous 
-            <ul class="list-unstyled">
-                <li><i class="fa fa-instagram"></i></li>
-                <li><i class="fa fa-youtube-square"></i></li>
-                <li><i class="fa fa-twitter"></i></li>
-                <li><i class="fa fa-linkedin"></i></li>
-            </ul>
-        </h3>
+        <h4>Suivez nous </h4>
+        <ul class="list-unstyled networks">
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-youtube-square"></i></li>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-linkedin"></i></li>
+        </ul>
+        
     </footer>
 
 

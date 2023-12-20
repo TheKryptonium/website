@@ -6,6 +6,7 @@
     
     <!--CSS FILES-->
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
 
     <title>Nos histoires</title>
@@ -13,44 +14,42 @@
 <body>
     <header>
         <nav class="nav">
-            <ul class="list-unstyled">
+           <ul class="list-unstyled">
                 <li class="nav-item">
-                    <i class="fa fa-bars"></i>
+                    <a href="#left-menu"><i class="fa fa-bars"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img class="img-fluid" src="" alt="Octal-Group"></a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img class="img-fluid logo" src="./assets/images/logo/OCTAL-GROUP-TEXTE.png" alt="Octal-Group"></a>
                 </li>
-            </ul>
+           </ul>
         </nav>
-        
-        
-        
-        
-        
-        
+
         <!--LEFT-MENU-->
-        <div class="left-menu">
-            <ul class="list-unstyled">
-            <li><a href="">A propos de nous</a></li>
-            <li><a href="">Nos produits</a></li>
-            <li><a href="">Nos engagements</a></li>
-            <li><a href="">Nos histoires</a></li>
-            </ul>
+        <div class="overlay" id="left-menu">
+            <div class="left-menu">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img class="img-fluid" src="./assets/images/logo/OCTAL-GROUP_V3.png" alt="Octal-Group"></a>
+                <ul class="list-unstyled">
+                <li><a href="./about.html">A propos de nous</a></li>
+                <li><a href="./products.html">Nos produits</a></li>
+                <li><a href="./engagements.html">Nos engagements</a></li>
+                <li class="active"><a href="#">Nos histoires</a></li>
+                </ul>
+            </div>
         </div>
+
     </header>
 
   
-
     <footer>
-        <h3>Suivez nous 
-            <ul class="list-unstyled">
-                <li><i class="fa fa-instagram"></i></li>
-                <li><i class="fa fa-youtube-square"></i></li>
-                <li><i class="fa fa-twitter"></i></li>
-                <li><i class="fa fa-linkedin"></i></li>
-            </ul>
-        </h3>
-    </footer> 
+        <h3>Suivez nous </h3>
+        <ul class="list-unstyled networks">
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-youtube-square"></i></li>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-linkedin"></i></li>
+        </ul>
+        
+    </footer>
 
 <!--JS FILES-->
 <script src="./js/bootstrap.js"></script>

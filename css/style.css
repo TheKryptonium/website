@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    margin-left:15px;
+    margin-top: 0;
+}
+
+.nav .nav-item{
+    display: inline-block;
+    padding-top: 0px ;
+}
+
+.nav-item .logo{
+    width: 150px;
+    height: 100px;
+ }
+
+
+
+ a img{
+    height: 50px;
+    width: 70px;
+}
+
+.fa-bars{
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom : 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s opacity;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 250;
+}
+
+.overlay:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.left-menu{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    padding-left: 15px;
+    width: 45%;
+    height: 100%;
+    z-index: 500;
+    position: relative;
+    padding: 2rem;
+    color : black;
+    transition: all 0.7s ease-in-out;
+}
+
+.left-menu li{
+    margin-top: 10px;
+    padding: 15px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+.left-menu li a{
+    color: black;
+    text-decoration: none;
+}
+
+.left-menu li.active{
+    font-weight: bolder;
+    background-color: whitesmoke;
+    border-radius: 35px;
+}
+.find{
+    font-size: 1.5rem;
+    margin:  200px 0 200px 0;
+}
+
+.buttons .btn{
+    margin: 0 40px 0 40px;
+}
+
+.card{
+    border: none;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.card text{
+    font-size: 1.5rem;
+}
+
+.networks li{
+    display: inline-block;
+    margin: 0 15px 0 10px;
+}
+
+
+.col:nth-child(1){
+    vertical-align: middle;
+}
+
+.all-p{
+    text-align: justify;
+}
+
+.all-p li{
+    height: 50px;
+    padding : 15px 0;
+    
+}
+
+li .img-fluid{
+    width: 25px;
+    margin-right:10px;
+}
+
+footer{
+    padding-left: 5%;
+    margin-top: 100px;
+}
+
+footer h4, footer ul{
+    display: inline-block;
+    margin: 0 15px 10px 0;
+}
+footer ul li{
+    font-size: 2rem;
+}
