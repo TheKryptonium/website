@@ -13,7 +13,7 @@ const handleIcons = ()=>{
 
 arrow.forEach(icon=>{
     icon.addEventListener("click",()=>{
-        tabsbox.scrollLeft += icon.id === "left"? -315 : 315;
+        tabsbox.scrollLeft += icon.id === "left"? -105 : 105;
         setTimeout(()=>handleIcons(),50)
     })
 })

@@ -1,14 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-   
 }
 
 .nav{
     margin-left:15px;
     margin-top: 0;
-    display: hidden;
-   
+    visibility: hidden;
 }
 
 .nav .nav-item{
@@ -21,9 +19,6 @@
     height: 100px;
  }
  
-
-
-
  a img{
     width: 100px;
 }
@@ -32,49 +27,32 @@
     font-size: 1.5rem;
     color: black;
 }
-
 .fa-close{
-    position: absolute;
-    margin: 40px 15px;
-    top: 0;
-    right: 0;
-    color: black;
-}
-
-
-
-.overlay{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom : 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: 0.3s opacity;
-    opacity: 0;
     visibility: hidden;
-    z-index: 250;
 }
 
-.overlay:target{
-    opacity: 1;
-    visibility: visible;
-} 
 
 .left-menu{
-    position: relative;
+    position: absolute;
     top: 0;
-    left: 0;
     background-color: white;
     padding-left: 15px;
-    width: 60%;
-    height: 100%;
+    width: 100%;
     z-index: 500;
     color : black;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     transition: all 0.7s ease-in-out;
 }
 
+.left-menu ul{
+    height: 50px;
+
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+}
 
 .left-menu ul>li{
    padding: 15px 25px 15px 25px;
@@ -100,35 +78,66 @@
 }
 
 
-/* 
-.left-menu.full{
-    position: absolute;
-    top: 0;
-    background-color: white;
-    padding-left: 15px;
-    display: flex;
+ul.tabs, .tabs li{
+    padding: 0;
+    margin: 0; 
+    display: inline-flex;
+
 }
 
-.overlay>.full{
-    display: visible;
+.tabs>div{
+    padding:0
+}
+.tabs li {
+    cursor: pointer;
+    display: block;
+}
+
+.toup{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    z-index: 500;
+
+}
+
+.toup a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.visible{
+    visibility:visible;
 }
 
 
+.tabs-content{
+    margin-top: 50px;
+    position: relative;
+    color: inherit;
+    z-index: 3;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 1px 3px aliceblue, 0 1px 2px aliceblue ;
+    animation: title ease-in-out 3.5s;
+}
 
-.left-menu li{
-    margin-top: 10px;
-    padding: 15px;
-    height: 50px;
-    font-size: 1.2rem;
+.tab-content{
+    opacity: 0;
+    display: none; 
+}
+
+.tab-content.active{
+     display: block; 
+     opacity: 1;
+     height: auto;
 }
 
 
-
-.left-menu li.active{
-    font-weight: bolder;
-    background-color: whitesmoke;
-    border-radius: 35px;
-} */
 .find{
     font-size: 1.5rem;
     margin:  200px 0 200px 0;
@@ -171,13 +180,12 @@
 .icon:first-child{
     left: 0;
     display: none;
-    background: linear-gradient(-90deg,#fff 30%, transparent);
 }
 
 .icon:last-child{
     right: 0;
     justify-content: flex-end;
-    background: linear-gradient(90deg,#fff 30%, transparent);
+
 }
 
 .icon i{
@@ -272,4 +280,133 @@ footer h4, footer ul{
 footer ul li{
     font-size: 1.1rem;
     margin: 0 0 0 5px;
+}
+
+footer ul a{
+    text-decoration: none;
+    color: black;
+} 
+
+
+@keyframes title{
+    0%{
+        opacity: 0;
+        transform: translateY(180px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav{
+        margin-left:15px;
+        margin-top: 0;
+        visibility:visible;
+       
+    }
+    
+    .nav .nav-item{
+        display: inline-block;
+        padding-top: 0px ;
+    }
+    
+    .nav-item .logo{
+        width: 150px;
+        height: 100px;
+    }
+     
+    
+    a img{
+        width: 100px;
+    }
+    
+    .fa-bars{
+        font-size: 1.5rem;
+        color: black;
+    }
+    
+    .fa-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 35px 15px;
+        color: rgba(0, 0, 0, 0.541);
+        visibility: visible;
+        transition: all ease 0.7s ;
+    }
+    
+    .fa-close:hover{
+        color: rgba(0, 0, 0, 1);
+ 
+    }
+    
+    
+    .overlay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom : 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: 0.3s opacity;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 250;
+    }
+    
+    .overlay:target{
+        opacity: 1;
+        visibility: visible;
+    } 
+    
+    .left-menu{
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: white;
+        padding: 0 15px;
+        display: block;
+        justify-content: unset;
+        align-items: unset;
+        width: 65%;
+        height: 100%;
+        z-index: 500;
+        color : black;
+        transition: all 0.7s ease-in-out;
+    }
+    
+    ul.tabs{
+        display: block;
+    }
+    
+    .left-menu .tabs>li{
+       padding: 15px 25px 15px 25px;
+      
+    }
+    
+    .left-menu li a{
+        color: rgba(0, 0, 0, 0.541);
+        text-decoration: none;
+    }
+    
+    .left-menu .tabs>li.active{
+        background-color: rgba(224, 220, 220, 0.741);
+        border-bottom: none;
+        border-radius: 50px 45px;
+        color: black;
+        font-weight: bold;
+
+    
+    }
+    .active>a{
+        color: black;
+    }
+    
+    .left-menu .tabs>li:hover{
+        background-color: rgba(224, 220, 220, 0.541);
+    
+    }
 }
