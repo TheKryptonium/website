@@ -13,7 +13,7 @@ const handleIcons = ()=>{
 
 arrow.forEach(icon=>{
     icon.addEventListener("click",()=>{
-        tabsbox.scrollLeft += icon.id === "left"? -105 : 105;
+        tabsbox.scrollLeft += icon.id === "left"? -315 : 315;
         setTimeout(()=>handleIcons(),50)
     })
 })
@@ -39,9 +39,11 @@ const dragstop=()=>{
     tabsbox.classList.remove('dragging')
 }
 
+.addEventListener('')
 tabsbox.addEventListener("mousedown",()=>isdragging=true)
 tabsbox.addEventListener("mousemove",dragging)
 document.addEventListener("mouseup", dragstop)
+
 
 
 

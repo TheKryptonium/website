@@ -30,7 +30,17 @@
 .fa-close{
     visibility: hidden;
 }
+.toup{
+    
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 25px 15px;
+}
 
+.toup a{
+    color: black;
+}
 
 .left-menu{
     position: absolute;
@@ -48,10 +58,10 @@
 
 .left-menu ul{
     height: 50px;
-
     align-items: flex-start;
     justify-content: center;
     display: flex;
+    list-style-type:none ;
 }
 
 .left-menu ul>li{
@@ -75,66 +85,6 @@
 .left-menu ul>li:hover{
     background-color: rgba(224, 220, 220, 0.541);
 
-}
-
-
-ul.tabs, .tabs li{
-    padding: 0;
-    margin: 0; 
-    display: inline-flex;
-
-}
-
-.tabs>div{
-    padding:0
-}
-.tabs li {
-    cursor: pointer;
-    display: block;
-}
-
-.toup{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 60px;
-    margin: 25px 25px;
-    border-radius: 50%;
-    z-index: 500;
-
-}
-
-.toup a{
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-}
-
-.visible{
-    visibility:visible;
-}
-
-
-.tabs-content{
-    margin-top: 50px;
-    position: relative;
-    color: inherit;
-    z-index: 3;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 1px 3px aliceblue, 0 1px 2px aliceblue ;
-    animation: title ease-in-out 3.5s;
-}
-
-.tab-content{
-    opacity: 0;
-    display: none; 
-}
-
-.tab-content.active{
-     display: block; 
-     opacity: 1;
-     height: auto;
 }
 
 
@@ -180,12 +130,13 @@ ul.tabs, .tabs li{
 .icon:first-child{
     left: 0;
     display: none;
+    background: linear-gradient(-90deg,#fff 30%, transparent);
 }
 
 .icon:last-child{
     right: 0;
     justify-content: flex-end;
-
+    background: linear-gradient(90deg,#fff 30%, transparent);
 }
 
 .icon i{
@@ -282,21 +233,8 @@ footer ul li{
     margin: 0 0 0 5px;
 }
 
-footer ul a{
-    text-decoration: none;
+footer li a{
     color: black;
-} 
-
-
-@keyframes title{
-    0%{
-        opacity: 0;
-        transform: translateY(180px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
 }
 
 
@@ -316,7 +254,7 @@ footer ul a{
     .nav-item .logo{
         width: 150px;
         height: 100px;
-    }
+     }
      
     
     a img{
@@ -378,11 +316,11 @@ footer ul a{
         transition: all 0.7s ease-in-out;
     }
     
-    ul.tabs{
+    .left-menu ul{
         display: block;
     }
     
-    .left-menu .tabs>li{
+    .left-menu ul>li{
        padding: 15px 25px 15px 25px;
       
     }
@@ -392,9 +330,9 @@ footer ul a{
         text-decoration: none;
     }
     
-    .left-menu .tabs>li.active{
+    .left-menu ul>li.active{
         background-color: rgba(224, 220, 220, 0.741);
-        border-bottom: none;
+        border-color: none;
         border-radius: 50px 45px;
         color: black;
         font-weight: bold;
@@ -405,7 +343,7 @@ footer ul a{
         color: black;
     }
     
-    .left-menu .tabs>li:hover{
+    .left-menu ul>li:hover{
         background-color: rgba(224, 220, 220, 0.541);
     
     }
